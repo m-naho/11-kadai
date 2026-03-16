@@ -35,4 +35,20 @@ jQuery(function ($) {
     return false;
   });
 
+  // ハンバーガーメニュー開閉
+  $(".js-hamburger").click(function () {
+    console.log("クリックされました！");
+    $(this).toggleClass("is-open");
+    $(".js-drawer").toggleClass("is-open");
+    $("body").toggleClass("is-fixed");
+  });
+
+  // ドロワーメニュー内のリンクがクリックされたら閉じる
+  $(".js-drawer a").click(function () {
+    $(".js-hamburger").removeClass("is-open");
+    $(".js-drawer").removeClass("is-open");
+    $("body").removeClass("is-fixed");
+  });
+
+  // その他（ページトップやスムーススクロールなど、元々あったコードも必要ならここへ）
 });
