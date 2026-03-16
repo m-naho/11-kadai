@@ -1,0 +1,36 @@
+@use "global" as *;
+.c-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $beige;
+  position: relative;
+  padding-block: rem(60) rem(48);
+  padding-inline: rem(25);
+}
+
+.c-service::before {
+  content: "";
+  position: absolute;
+  inset: rem(3);
+  border: 2px solid #fff;
+  pointer-events: none;
+}
+
+.c-service__title {
+  font-size: rem(20);
+  font-weight: 500;
+  color: $green2;
+  line-height: calc(29 / 20);
+  letter-spacing: 0.05em;
+}
+
+.c-service__text {
+  font-size: rem(14);
+  font-weight: 400;
+  color: $green2;
+  line-height: calc(30 / 14);
+  letter-spacing: 0.05em;
+  padding-inline: rem(25);
+  margin-top: rem(21);
+}

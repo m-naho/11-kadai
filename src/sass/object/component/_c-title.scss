@@ -1,0 +1,30 @@
+@use "global" as *;
+.c-title {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    align-items: center;
+  }
+}
+
+.c-title__en {
+  font-family: $font-sub;
+  font-size: rem(36);
+  font-weight: 500;
+  line-height: calc(48 / 36);
+  letter-spacing: 0.05em;
+}
+
+.c-title__ja {
+  font-size: rem(10);
+  font-weight: 400;
+  color: $green;
+  line-height: calc(48 / 10);
+  letter-spacing: 0.05em;
+  margin-top: rem(-14);
+  @include mq(md) {
+    font-size: rem(12);
+    line-height: calc(48 / 12);
+    margin-top: rem(-15);
+  }
+}

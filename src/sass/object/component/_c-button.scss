@@ -1,0 +1,18 @@
+@use "global" as *;
+.c-button {
+  background-color: $green;
+  color: $white;
+  font-size: rem(20);
+  font-weight: 300;
+  line-height: calc(30 / 20);
+  letter-spacing: 0.05em;
+  display: block;
+  padding-block: rem(15) rem(14);
+  text-align: center;
+  box-shadow: rem(2) rem(2) rem(4) rgba(0, 0, 0, 0.2);
+}
+
+.c-button:hover {
+  box-shadow: none;
+  opacity: 0.7;
+}
