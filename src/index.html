@@ -35,9 +35,12 @@
     <!-- ファビコン -->
     <link rel="icon" href=".images/favicon.svg" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.min.css" />
     <!-- JavaScript -->
@@ -45,18 +48,56 @@
     <script defer src="./js/script.min.js"></script>
   </head>
   <body>
-    <div class="l-inner">
-      <p class="p-test">サイトが表示されました!</p>
-      <div class="p-test__img">
-        <img
-          src="./images/dummy1.webp"
-          alt="サンプル画像"
-          width="3600"
-          height="2400"
-          loading="lazy"
-          decoding="async"
-        />
+    <header class="p-header js-header">
+      <div class="p-header__inner">
+        <h1 class="p-header__title">
+          <a href="/" class="p-header__title-link">Codo Assist</a>
+        </h1>
+        <button
+          class="p-header__hamburger js-hamburger"
+          aria-label="メニューを開く"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="p-header__wrapper js-drawer">
+          <nav class="p-header__nav">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item">
+                <a href="#About" class="p-header__nav-link">About</a>
+              </li>
+              <li class="p-header__nav-item">
+                <a href="#Service" class="p-header__nav-link">Service</a>
+              </li>
+              <li class="p-header__nav-item">
+                <a href="#News" class="p-header__nav-link">News</a>
+              </li>
+              <li class="p-header__nav-item">
+                <a href="#FAQ" class="p-header__nav-link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="p-header__contact">
+            <a href="#" class="p-header__contact-button c-button">Contact</a>
+          </div>
+        </div>
       </div>
+    </header>
+
+    <!-- MV -->
+    <div class="p-mv">
+      <picture class="c-mv__image">
+        <source srcset="./images/fv-bgi1.webp" type="image/webp" />
+        <source srcset="./images/fv-bgi2.webp" media="(min-width: 768px)" />
+        <img
+          src="images/mv-pc1.jpg"
+          alt="グランピングサイトの様子"
+          width="1440"
+          height="814"
+          decoding="async">
+      </picture>
     </div>
+    
   </body>
 </html>
