@@ -1,6 +1,7 @@
 @use "global" as *;
 .p-about {
   margin-bottom: rem(100);
+  margin: 0 auto;
 }
 
 .p-about__container {
@@ -52,4 +53,3 @@
     display: block;
   }
 }
-

@@ -1,117 +1,65 @@
 @use "global" as *;
+.p-about {
+
+}
+
+.p-about__container {
+
+}
+
+.p-about__text {
+
+}
+
+.c-title {
+
+}
+
+.c-title__en {
+
+}
+
+.c-title__ja {
+
+}
+
+.p-about__img {
+
+}
 
 .p-service {
-  width: 100%;
-  background-color: rgba(5, 135, 158, 0.08);
-  padding-block: rem(105) rem(100);
-
 
 }
 
 .p-service__wrapper {
-  width: 100%;
-  padding-inline: rem(15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include mq(md) {
-    max-width: 100%;
-    width: 100%;
-    padding-inline: 0;
-    margin: 0 auto;
-  }
 
 }
 
 .p-service__title {
-  margin-bottom: rem(21);
+
 }
 
 .p-service__container-top {
-  width: 100%;
-  max-width: rem(345);
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  margin-inline: auto;
-  @include mq(md) {
-    max-width: none;
-    width: rem(800);
-    flex-direction: row-reverse;
-    margin-top: rem(30);
-    
-  }
+
 }
 
 .c-service {
-  @include mq(md) {
-    width: rem(400);
-  }
+
 }
 
 .c-service__title {
-  font-size: rem(20);
-  font-weight: 300;
-  line-height: calc(29 / 20);
-  letter-spacing: 0.05;
-  margin-block: rem(6) rem(20);
-  @include mq(md) {
-    font-size: rem(24);
-    font-weight: 400;
-    line-height: calc(35 / 24);
-    margin-top: rem(20);
-  }
-  
+
 }
 
 .c-service__text {
-  font-size: rem(14);
-  font-weight: 300;
-  line-height: calc(30 / 14);
-  letter-spacing: 0.05em;
-  @include mq(md) {
-    width: rem(240);
-    font-size: rem(15);
-    line-height: calc(28 / 15);
-    margin-top: ;
 
-  }
 }
 
 .p-service__img {
-  width: 100%;
-  max-width: rem(345);
-  height: auto;
-  aspect-ratio: 1 /1;
-  @include mq(md) {
-    width: rem(400);
-    height: rem(400);
-  }
-}
 
-.p-service__img img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 345 / 345;
-  object-fit: cover;
 }
 
 .p-service__container-bottom {
-  width: rem(345);
-  height: rem(690);
-  display: flex;
-  flex-direction: column;
-  margin-inline: auto;
-  @include mq(md) {
-    width: rem(800);
-    height: rem(400);
-    flex-direction: row;
-    margin-inline: auto;
-  }
-}
 
-.p-service__container-bottom p {
-  padding-bottom: rem(30);
 }
-
 
