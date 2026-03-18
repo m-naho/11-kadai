@@ -26,14 +26,19 @@
   justify-content: space-between;
   @include mq(md) {
     padding-left: rem(25);
+    position: absolute;
+    top: 0;
+    height: rem(75);
+    width: 100%;
   }
 }
 
 .p-header__title {
   display: block;
   margin-top: rem(2);
+  z-index: 1000;
   @include mq(md) {
-    margin-top: rem(18.5);
+    margin-top: 0;
   }
 }
 
@@ -101,27 +106,35 @@
 .p-header__wrapper {
   display: block;
   position: fixed;
-  top: rem(80);
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh - rem(80));
+  height: 100vh;
   background-color: $green2;
+  z-index: 999;
   overflow-y: auto;
   padding-block: rem(80) rem(160);
   z-index: 100;
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+
+  &.is-open {
+    transform: translateX(0); 
+  }
+
   @include mq(md) {
     position: static;
     width: auto;
     height: auto;
+    background-color: transparent;
     padding: 0;
-    opacity: 1;
+    transform: none;
     pointer-events: auto;
     display: flex;
     align-items: center;
     gap: rem(70);
+    z-index: auto;
   }
 }
 
@@ -133,7 +146,7 @@
   @include mq(md) {
     flex-direction: row;
     align-items: center;
-    gap: rem(20);
+    gap: rem(0);
   }
 }
 
@@ -152,19 +165,38 @@
 }
 
 .p-header__nav-list {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    width: rem(370);
+    gap: rem(50);
+  }
 }
 
 .p-header__nav-item {
   font-size: rem(16);
   font-weight: 500;
+  font-family: $font-sub;
   line-height: calc(23 / 16);
   letter-spacing: 0.05em;
   color: $white;
   width: rem(200);
   margin: 0 auto;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   padding-bottom: rem(28);
+  @include mq(md) {
+    line-height: calc(19 / 16);
+    border-bottom: none;
+    margin: 0;
+    padding-bottom: 0;
+    width: auto;
+    text-align: left;
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
 }
 
 .p-header__nav-link {
@@ -180,9 +212,17 @@
   height: auto;
   margin-block: rem(25) rem(160);
   margin-inline: auto;
-
-
-}
-
-.c-button {
+  font-size: rem(16);
+  @include mq(md) {
+    margin-block: 0;
+    background-color: $green;
+    color: $white;
+    width: rem(104);
+    height: rem(75);
+    text-align: center;
+    padding-top: rem(25);
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

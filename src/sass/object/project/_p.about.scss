@@ -1,0 +1,55 @@
+@use "global" as *;
+.p-about {
+
+}
+
+.p-about__container {
+  display: flex;
+  gap: rem(30);
+}
+
+.c-title {
+  margin-bottom: rem(4);
+  @include mq(md) {
+    margin-bottom: rem(10);
+  }
+}
+
+.p-about__text {
+  width: rem(540);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.p-about h3 {
+  font-size: rem(20);
+  font-weight: 300;
+  line-height: calc(38 / 20);
+  letter-spacing: 0.05em;
+  margin-bottom: rem(14);
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: calc(42 / 24);
+    margin-bottom: rem(20);
+  }
+}
+
+.p-about p {
+  font-size: rem(14);
+  font-size: 300;
+  line-height: calc(30 / 14);
+  letter-spacing: 0.05em;
+  @include mq(md) {
+    font-size: rem(15);
+    line-height: calc(28 / 15);
+  }
+}
+
+.p-about__img {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+

@@ -1,0 +1,107 @@
+@use "global" as *;
+.p-mv {
+  height: rem(665);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: rem(105);
+  @include mq(md) {
+    height: rem(814);
+  }
+}
+
+.p-mv__title {
+  background-color: $white;
+  position: absolute;
+  top: rem(298);
+  left: 0;
+  z-index: 10;
+  width: auto;
+  height: auto;
+  @include mq(md) {
+    top: rem(352);
+    left: rem(120);
+
+  }
+}
+
+.p-mv__title-text {
+  font-size: rem(37);
+  font-weight: 400;
+  line-height: calc(19 / 37);
+  color: #076474;
+  padding-block: rem(30) rem(20);
+  padding-inline: rem(21) rem(37);
+  font-family: $font-sub;
+  @include mq(md) {
+    font-size: rem(60);
+    font-weight: 400;
+    line-height: calc(30 / 60);
+    padding-block: rem(45) rem(35);
+    padding-inline: rem(32.5) rem(55);
+    letter-spacing: 0.005em;
+  }
+  
+}
+
+.p-mv__fade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.p-mv__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: cover;
+  animation: fade 15s infinite;
+}
+
+.p-mv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.p-mv__fade li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.p-mv__fade li:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.p-mv__fade li:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.p-mv__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
