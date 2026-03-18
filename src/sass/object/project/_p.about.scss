@@ -1,6 +1,6 @@
 @use "global" as *;
 .p-about {
-
+  margin-bottom: rem(100);
 }
 
 .p-about__container {
@@ -8,7 +8,7 @@
   gap: rem(30);
 }
 
-.c-title {
+.p-about .c-title {
   margin-bottom: rem(4);
   @include mq(md) {
     margin-bottom: rem(10);

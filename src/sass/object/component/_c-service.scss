@@ -12,7 +12,7 @@
 .c-service::before {
   content: "";
   position: absolute;
-  inset: rem(3);
+  inset: rem(4);
   border: 2px solid #fff;
   pointer-events: none;
 }
@@ -31,6 +31,4 @@
   color: $green2;
   line-height: calc(30 / 14);
   letter-spacing: 0.05em;
-  padding-inline: rem(25);
-  margin-top: rem(21);
 }
