@@ -1,0 +1,88 @@
+@use "global" as *;
+.p-faq {
+  padding-block: rem(105) rem(100);
+  padding-inline: rem(15);
+  background-color: rgba(5, 135, 158,  0.08);
+}
+
+.c-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  @include mq(md) {
+    
+    align-items: center; 
+    gap: 0;
+    margin-inline: auto;
+  }
+}
+
+.c-accordion__container {
+  @include mq(md) {
+    width: rem(800);
+  }
+  
+}
+
+.c-accordion__q {
+}
+
+.c-accordion__label-q {
+  display: flex;
+  align-items: center;
+}
+
+.c-accordion__title {
+  flex-grow: 1;
+}
+
+.jsAccordionTitle {
+
+}
+
+.c-accordion__a {
+
+}
+
+
+
+.c-accordion__a {
+  margin: 0;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.05em;
+  color: $black;
+  padding-block: rem(10) rem(30);
+  display: flex;
+  align-items: flex-start;
+  height: 0;
+  width: rem(338);
+  overflow: hidden;
+  opacity: 0;
+  padding-block: 0;
+  transition-duration: 0.3s;
+  @include mq(md) {
+    margin-top: rem(20);
+    width: rem(800);
+    
+  }
+}
+
+.c-accordion__label-a {
+  flex-shrink: 0;
+  // margin-left: rem(12);
+  margin-top: 0;
+  padding-top: 0; 
+  line-height: calc(26 / 14);
+}
+
+.c-accordion__a.is-open {
+  height: auto;
+  opacity: 1;
+  margin-block: rem(10) rem(20);
+  @include mq(md) {
+    margin-bottom: rem(30);
+  }
+}
+

@@ -12,7 +12,8 @@
 
   &.is-show {
     background-color: $white, 0.7;
-    backdrop-filter: blur(10px); // 背景をぼかす
+    backdrop-filter: blur(10px);
+    counter-reset: #076474;
   }
 }
 

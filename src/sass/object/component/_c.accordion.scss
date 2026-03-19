@@ -10,7 +10,7 @@
   background-color: $green;
   color: $white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: rem(3);
 }
 
@@ -18,14 +18,16 @@
   flex-shrink: 0;
   margin-top: 0;
   margin-left: rem(10);
+  padding-top: rem(16); 
+  line-height: calc(26 / 14);
   @include mq(md) {
     margin-left: rem(20);
   }
 }
 
 .c-accordion__title {
-  font-size: rem(14);
-  font-weight: 400;
+  font-size: rem(13);
+  font-weight: 300;
   line-height: calc(26 / 14);
   letter-spacing: 0.05em;
   padding-block: rem(16) rem(18);
@@ -33,6 +35,9 @@
   position: relative;
   z-index: 10;
   cursor: pointer;
+  @include mq(md) {
+    font-size: rem(15);
+  }
 }
 
 .c-accordion__title::before,
@@ -42,13 +47,12 @@
   background-color: $white;
   position: absolute;
   top: 50%;
-  right: rem(12);
+  right: rem(10);
   width: rem(16);
   height: rem(2);
-  transform: translateY(-50%);
 }
 
-@include mq(xl) {
+@include mq(md) {
   .c-accordion__title::before,
   .c-accordion__title::after {
     right: rem(21);
@@ -77,27 +81,26 @@
 .c-accordion__label-a {
   flex-shrink: 0;
   margin-top: rem(10);
-  margin-left: rem(12);
 }
 
-.c-accordion__content {
+.c-accordion__a {
   margin: 0;
-  font-size: rem(14);
-  font-weight: 400;
+  font-size: rem(13);
+  font-weight: 300;
   line-height: calc(26 / 14);
   letter-spacing: 0.05em;
   color: $black;
-  padding-block: rem(10) rem(30);
-  // height: 0;
-  // overflow: hidden;
-  // opacity: 0;
+  height: auto;
+  overflow: hidden;
+  opacity: 1;
   transition-duration: 0.3s;
   @include mq(md) {
     margin-top: rem(20);
+    font-size: rem(15);
   }
 }
 
-.c-accordion__content.is-open {
+.c-accordion__a.is-open {
   padding-left: rem(10);
   height: auto;
   opacity: 1;

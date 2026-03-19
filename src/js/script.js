@@ -51,4 +51,21 @@ jQuery(function ($) {
   });
 
   // その他（ページトップやスムーススクロールなど、元々あったコードも必要ならここへ）
+
+    // アコーディオンリスト
+  $(".jsAccordionTitle").on("click", function () {
+    $(this).toggleClass("is-active");
+    $(this).parent().next(".c-accordion__a").toggleClass("is-open");
+  });
+
+// ヘッダー
+$(window).on("scroll", function () {
+  const mvHeight = $(".js-mv").height();
+
+  if ($(window).scrollTop() > mvHeight) {
+    $(".p-header").addClass("is-show");
+  } else {
+    $(".p-header").removeClass("is-show");
+  }
+});
 });
