@@ -1,0 +1,20 @@
+@use "global" as *;
+.p-footer {
+  height: rem(60);
+  background-color: #202F43;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(md) {
+    height: rem(80);
+  }
+}
+
+.p-footer small {
+  font-size: rem(14);
+  font-weight: 300;
+  font-family: $font-sub;
+  line-height: calc(30 / 14);
+  letter-spacing: 0.05em;
+}
