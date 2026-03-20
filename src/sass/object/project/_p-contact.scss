@@ -1,0 +1,88 @@
+@use "global" as *;
+.p-contact__img {
+  width: rem(375);
+  height: rem(280);
+  object-fit: contain;
+  @include mq(md) {
+    width: rem(1440);
+    height: rem(480);
+    object-fit: contain;
+  }
+}
+
+.p-contact__img img {
+  width: 100%;
+  height: auto;
+
+}
+.p-contact {
+  margin-block: rem(105) rem(100);
+  padding-inline: rem(15);
+}
+
+.p-contact__wrapper {
+  width: rem(345);
+  @include mq(md) {
+    width: rem(600);
+    margin-inline: auto;
+  }
+}
+
+.p-contact__form {
+}
+
+.p-contact__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-contact__item {
+  margin-bottom: rem(18);
+}
+
+.p-contact__item label {
+  font-size: rem(14);
+  line-height: calc(30 / 14);
+}
+
+.p-contact__item dd {
+  width: 100%;
+}
+
+.p-contact__item input {
+  width: 100%;
+  padding: rem(8) rem(10);
+  height: rem(40);
+  font-size: rem(14);
+  line-height: calc(30 / 14);
+  background-color: $beige;
+  color: rgba(134, 134, 134, 0.5);
+  border: none;
+}
+
+.p-contact__item textarea {
+  width: 100%;
+  padding: rem(5) rem(10);
+  height: rem(170);
+  font-size: rem(14);
+  line-height: calc(30 / 14);
+  background-color: $beige;
+  color: rgba(#868686, 0.5);
+  border: none;
+}
+
+.p-contact__label {
+
+}
+
+.p-contact__discription {
+
+}
+
+.p-contact .c-button {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+

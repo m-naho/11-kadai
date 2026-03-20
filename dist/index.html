@@ -304,6 +304,53 @@
       </div>
     </div>
   </section>
+
+  <!-- Contact -->
+  <picture class="p-contact__img">
+    <source srcset="/images/contact-pc.webp"" type=" image/webp" media="(min-width: 768px)" />
+    <source srcset="./images/contact-sp.webp" type="image/webp" />
+    <img src="./images/contact-pc.jpg" alt="" width="1440" height="480" loading="lazy" decoding="async">
+  </picture>
+  <section class="p-contact">
+    <div class="p-contact__wrapper">
+      <h2 class="c-title">
+        <span class="c-title__en" aria-hidden="true">Contact</span>
+        <span class="c-title__ja">お問い合わせ</span>
+      </h2>
+      <form action="#" class="p-contact__form">
+        <dl class="p-contact__list">
+          <div class="p-contact__item">
+            <dt class="p-contact__label">
+              <label for="name">お名前</label>
+            </dt>
+            <dd class="p-contact__discription"><input type="text" id="name" name="your-name" placeholder="お名前をフルネームで入力してください"></dd>
+          </div>
+          <div class="p-contact__item">
+            <dt class="p-contact__label">
+              <label for="name">電話番号</label>
+            </dt>
+            <dd class="p-contact__discription"><input type="text" id="name" name="your-name" placeholder="000-0000-0000"></dd>
+          </div>
+
+          <div class="p-contact__item">
+            <dt class="p-contact__label">
+              <label for="name">メールアドレス</label>
+            </dt>
+            <dd class="p-contact__discription"><input type="text" id="name" name="your-name" placeholder="contact@codoassist.co.jp"></dd>
+          </div>
+
+          <div class="p-contact__item">
+            <dt class="p-contact__label">
+              <label for="name">お問い合わせ内容</label>
+            </dt>
+            <dd class="p-contact__discription"><textarea type="text" id="name" name="your-name" placeholder="入力してください"></textarea></dd>
+          </div>
+    </div>
+    </dl>
+    </form>
+    <a href="#" class="c-button">送信</a>
+    </div>
+  </section>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
   <script defer src="./js/script.js"></script>
